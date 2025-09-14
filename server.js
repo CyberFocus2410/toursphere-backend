@@ -4,6 +4,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
+// A simple route for the root URL to confirm the API is running
+app.get('/', (req, res) => {
+  res.send('Toursphere API is running successfully!');
+});
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON bodies
